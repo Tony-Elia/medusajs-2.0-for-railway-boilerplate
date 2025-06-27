@@ -9,7 +9,7 @@ import {
 import { createRestaurantProductsWorkflow } from "../../../../workflows/restaurant/workflows/create-restaurant-products";
 
 const createSchema = z.object({
-  products: z.array(AdminCreateProduct())
+  products: z.array(AdminCreateProduct() as unknown as z.ZodTypeAny),
 })
 
 export async function POST(req: MedusaRequest, res: MedusaResponse) {
