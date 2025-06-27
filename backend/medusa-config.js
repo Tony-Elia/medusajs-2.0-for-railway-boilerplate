@@ -75,6 +75,12 @@ const medusaConfig = {
         ]
       }
     },
+    {
+      resolve: "./modules/restaurant",
+    },
+    {
+      resolve: "./modules/delivery"
+    },
     ...(REDIS_URL ? [{
       key: Modules.EVENT_BUS,
       resolve: '@medusajs/event-bus-redis',
